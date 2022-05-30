@@ -1,16 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	var a int
-	var b int
+	var a float64
+	var d float64
 
-	fmt.Print("Введите длину и ширину прямоугольника -  a, b: ")
-	fmt.Scanln(&a, &b)
+	fmt.Print("Введите площадь круга -  a: ")
+	fmt.Scanln(&a)
 
-	if a > 0 && b > 0 {
-		fmt.Println("Площадь прямоугольника", (a * b), "см")
+	d = math.Sqrt((4*a)/math.Pi)
+
+	if a > 0 {
+		//S = d2 : 4 × π ->  
+		fmt.Println("Диаметр окружности = ", fmt.Sprintf("%.2f", d), "см")
+		//L = D × π -> 
+		fmt.Println("Длина окружности = ", fmt.Sprintf("%.2f", d * math.Pi), "см")
+
 	} else {
 		fmt.Println("ВЫ ввели  некорректные данные. Попробуйте еще раз.")
 	}
