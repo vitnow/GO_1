@@ -2,47 +2,40 @@ package main
 
 import "fmt"
 
-// function declinationOfNumber(count, one, two, five) {
-//     const n100 = Math.abs(count) % 100;
-//     const n10 = n100 % 10;
+//import "math"
 
-//     if (n100 >= 5 && n100 <= 20) {
-//       return five;
+// func main() {
+//     add(1, 2, 3)        // sum = 6
+//     add(1, 2, 3, 4)     // sum = 10
+//     add(5, 6, 7, 2, 3)  // sum = 23
+// }
+
+// func add(numbers ...int){
+//     var sum = 0
+//     for _, number := range numbers{
+//         sum += number
 //     }
-//     if (n10 > 1 && n10 < 5) {
-//       return two;
-//     }
-//     if (n10 === 1) {
-//       return one;
-//     }
-//     return five;
-//   }
-
-  
-//   const applesNumber = +prompt(`Введите число`);
-//   const word = declinationOfNumber(applesNumber, "яблоко", "яблока", "яблок");
-//   console.log(`У меня есть ${applesNumber} ${word}.`);
-
-  /*
-  1. Получаем остаток от деления на 100, т.к. свыше 100 все повторяется.
-  2. Дополнительно будем проверять остаток от деления на 10.
-  3. Правила по которым возвращаем слово:
-    1. Если последние два числа в диапазоне [5 .. 20], значит слово для числа
-      пять.
-    2. Если последние два числа вне диапазона [5 .. 20], то все просто:
-      2.1. Если единица числа - это число в диапазоне [2 .. 4], значит слово для
-        числа два.
-      2.2. Если единица числа это число 1, значит слово для числа один.
-      2.3. Если единица числа это любое другое число, значит возвращаем слово
-        для числа пять.
-   */
-//
-
-
-
-
-
+//     fmt.Println("sum = ", sum)
+// }
 
 func main() {
-	fmt.Println("Start")
+	var a int
+	fmt.Print("Введите число от - a: ")
+	fmt.Scanln(&a)
+	ggg(a)
 }
+
+func ggg(a int) {
+	if a < 0 || a > 999 {
+		fmt.Println("Ошибка аргумента, данное значение не находися в интермале [0, 999].")
+	} else {
+		fmt.Println("Данное знасение находися в интермале [0, 999].")
+	}
+}
+
+//	return {
+//	  units: numb % 10,
+//	  dozens: Math.floor(numb / 10) % 10,
+//	  hundreds: Math.floor(numb / 100) % 10,
+//	  thousands: Math.floor(numb / 1000),
+//	};
