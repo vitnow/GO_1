@@ -63,4 +63,3 @@ func wordEnd(a int) {
 		fmt.Println(a1, arrHuns[b], a101, arrTens[c], a10, arrUnits[d])
 	}
 }
-
