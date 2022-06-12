@@ -3,8 +3,7 @@ package main
 import (
 	"fmt"
 	"math"
-	//	"os"
-)
+	)
 
 /*  Доработать калькулятор из методички: больше операций и валидации данных
  (проверка деления на 0, возведение в степень, факториал)
@@ -35,7 +34,7 @@ func main() {
 		} else {
 			rest = a * b
 		}
-		fmt.Printf("Результат выполнения операции: %.2f\n ", rest) //%d\n
+		fmt.Printf("Результат выполнения операции: %.2f\n ", rest)     //%d\n
 	} else if op == "/" && b != 0 {
 		rest = a / b
 		fmt.Printf("Результат выполнения операции: %.2f\n", rest)     //"%.2f\n
@@ -61,37 +60,4 @@ func main() {
 	} else {
 		fmt.Println("Операция выбрана неверно")
 	}
-
-	//	switch op {
-	//	case "+":
-	//		rest = a + b
-	//	case "-":
-	//		rest = a - b
-	//	case "*":
-	//		rest = a * b
-	//	case "/":
-	//		rest = a / b
-	//	case "x2":
-	//		rest = a * a
-	//		restS = b * b
-	//	case "x3":
-	//		rest = a * a * a
-	//		restS = b * b * b
-	//	case "x^n":
-	//		var x, k, y float32
-	//		y = a
-	//		k = b
-	//		for k = 1; k < (k - 1); k++ {
-	//			x = x * y
-	//		}
-	//		rest = x
-	//	//case "n!":
-	//	//	rest = ((a − 2) * (a − 1)) * a
-	//	default:
-	//		fmt.Println("Операция выбрана неверно")
-	//		os.Exit(1)
-	//	}
-	//	fmt.Printf("Результат выполнения операции: %.2f\n", rest)
-	//	fmt.Printf("Результат выполнения операции: %.2f\n", restS)
-	//}
 }
