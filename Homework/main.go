@@ -2,24 +2,29 @@ package main
 
 import (
 	"fmt"
-//	"math/rand"
+	"math/rand"
 )
 
 func main() {
-// for i :=1; i < 40; i++{
-// 	min := -100
-//     max := 100
-// 	fmt.Print(rand.Intn(max - min) + min)
-// }
-	
-	ars := []int{-19, -13, -53, -41, -19, 18, -75, 40, -44, 0, -6, 11, 62, -11, 28, -26, -89, -55, -63, 6, -5, -34, 28, -42, -53, 47,
-	13, -12, 90, -85, 41, -92, 87, -69, -71, 56, 37, -69, -15}
-	SortInsert(ars)
-	fmt.Println(ars)
-}
+	var a, b, am int     					     // Запрос значений у пользователя
+	fmt.Print("Введите минимальное значение min: ")
+	fmt.Scanln(&a)
+	fmt.Print("Введите минимальное значение max: ")
+	fmt.Scanln(&b)
+	fmt.Print("Введите колличество элементов: ")
+	fmt.Scanln(&am)
+	ars := make([]int, am)
+	min := a
+	max := b
 
-func SortInsert(ars []int) {
-	for i := 1; i < len(ars); i++ {
+	for a := 1; a < am; a++ {                    //Генерация  и запись в массив сгенерированные значения 
+		ars[a] = (rand.Intn(max-min) + min)
+		
+	}
+	
+	fmt.Println("Сгенерированный ряд значенией", ars)
+	
+	for i := 1; i < len(ars); i++ { 			//Сортировка значений методом --Вставка
 		x := ars[i]
 		j := i
 		for ; j >= 1 && ars[j-1] > x; j-- {
@@ -27,4 +32,5 @@ func SortInsert(ars []int) {
 		}
 		ars[j] = x
 	}
+	fmt.Println("Отсартированный ряд значенией",ars)
 }
