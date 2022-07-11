@@ -10,6 +10,37 @@ package main
 
 import "fmt"
 
+type Lenguager interface {
+	Hello() string
+}
+type Russian struct{}
+
+func (Russian) Hello() string {
+	return "Привет"
+}
+
+type English struct{}
+
+func (English) Hello() string {
+	return "Hello"
+}
+
+type Franch struct{}
+
+func (Franch) Hello() string {
+	return "Bonjour"
+}
+
+func sayHello(hello Lenguager) {
+	fmt.Println(hello.Hello())
+}
+
 func main() {
-	fmt.Println("Hello World!!!")
+	russianLang := Russian{}
+	englishLang := English{}
+	franchLang := Franch{}
+
+	sayHello(russianLang)
+	sayHello(englishLang)
+	sayHello(franchLang)
 }
