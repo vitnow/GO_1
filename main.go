@@ -1,46 +1,51 @@
 package main
 
+import (
+	"fmt"
+)
+
+// ЗАДАНИЕ 1
 // 1. С какими интерфейсами мы уже сталкивались в предыдущих уроках?
 // Обратите внимание на уроки, в которых мы читали из стандартного ввода и писали в стандартный вывод.
 
+//На уроках мы использовали стандартные методы ввода fmt.Scanln и вывода fmt.Println
+// которые реализованы через интерфейсы io.Reader и io.Writer.
+// Так же очень распространенный интерфейс обработки ошибок Error
+
+// ЗАДАНИЕ 2
 // 2. Посмотрите примеры кода в своём портфолио.
 // Везде ли ошибки обрабатываются грамотно? Хотите ли вы переписать какие-либо функции?
 
-// 3. Тест
+//Для того что бы не контролируемо сваливаться в панику нужно обрабатывать ошибки и выходить из функции  ->
+//если случилась ошибка.
+//В своих работах я производил обработку ошибок ввода через if и else
+// В своих будущих работах я буду использовать обработку ошибок и уменьшать количество else в условиях, уменьшая вложенность.
 
-import "fmt"
-
-type Lenguager interface {
-	Hello() string
-}
-type Russian struct{}
-
-func (Russian) Hello() string {
-	return "Привет"
-}
-
-type English struct{}
-
-func (English) Hello() string {
-	return "Hello"
-}
-
-type Franch struct{}
-
-func (Franch) Hello() string {
-	return "Bonjour"
-}
-
-func sayHello(hello Lenguager) {
-	fmt.Println(hello.Hello())
+func fibonachi(i int) (int) {
+	if i == 0 {
+		return 0
+	}
+	if i == 1 {
+		return 1
+	}
+	return fibonachi(i-1) + fibonachi(i-2)
 }
 
 func main() {
-	russianLang := Russian{}
-	englishLang := English{}
-	franchLang := Franch{}
 
-	sayHello(russianLang)
-	sayHello(englishLang)
-	sayHello(franchLang)
+	var a int
+	fmt.Print("Введите количество элементов последовательности от 0 до 50: ")
+	fmt.Scanln(&a)
+
+	if a > 0 && a <= 50 {
+		var i int
+		for i = 0; i < a; i++ {
+			fmt.Printf("%d ", fibonachi(i))
+		}
+	} else {
+		fmt.Println("Введенное значение некорректно. Попробуйте еще раз.")
+	}
 }
+
+// В своих будущих работах я буду использовать обработку ошибок и уменьшать количество else в условиях.
+
