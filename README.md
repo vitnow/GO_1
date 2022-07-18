@@ -22,3 +22,22 @@
 //	fmt.Println(host, username, password, port)
 //}
 
+
+
+
+// Чтение и запись переменных окружения через пакет os
+
+func main() {
+//	modile := os.Getenv("GO111MODULE")
+//	fmt.Println(modile)
+//
+//	modile_1, ok := os.LookupEnv("GO111MODULE")
+//	fmt.Println(modile_1, ok)
+//
+//	os.Clearenv()
+//	fmt.Println(os.Environ()) //Выводит все переменные окружения в консоль
+//
+//	os.Setenv("KEY", "VALUE")
+//	fmt.Println(os.Environ())
+//}
+
