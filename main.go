@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"testos/another"
+)
 
 func main() {
-	fmt.Println("Hello World!!!")
+
+	s := another.ReadConfig()
+
+	fmt.Println(s)
 }
