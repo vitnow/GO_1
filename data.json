@@ -1,0 +1,10 @@
+{
+  "DBHost": "abcdf",
+  "DBPort": "3333",
+  "DBName": "space",
+  "DBUser": "root",
+  "DBPassword": "root",
+  "PoolMaxConns": 23,
+  "PoolMinConns": 2,
+  "GoroutinesCount": 10
+}
