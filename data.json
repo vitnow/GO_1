@@ -1,0 +1,11 @@
+{
+  "DBHost": "1.2.3.4",
+  "DBPort": "3333",
+  "DBName": "space",
+  "DBUser": "root",
+  "DBEmail": "user@user.ru",
+  "DBPassword": "root",
+  "PoolMaxConns": 23,
+  "PoolMinConns": 2,
+  "GoroutinesCount": 10
+}
