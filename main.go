@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"testos/another"
+	"net/mail"
 )
 
 //К приложению из практической части предыдущего урока добавьте возможность читать данные из файлов.
@@ -13,6 +14,8 @@ import (
 //все URL’ы должны соответствовать ожидаемым форматам.
 
 func main() {
+
+	
 
 	data, err := os.ReadFile("data.json")
 
@@ -24,12 +27,22 @@ func main() {
 
 	if err = json.Unmarshal(data, &dt); err != nil {
 		panic(err)
-
 	}
+	
+	//	fmt.Printf("%5s valid: %t\n", dt.DBEmail, valid(dt.DBEmail))	
+	if valid(dt.DBEmail) != true {
+		panic(err)
+	}	
+	
 	fmt.Printf("%+v\n", dt)
 	//
 
 	s := another.ReadConfig()
 
 	fmt.Println(s)
+}
+
+func valid(DBEmail string) bool {
+	_, err := mail.ParseAddress(DBEmail)
+	return err == nil
 }
