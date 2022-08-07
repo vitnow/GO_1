@@ -2,6 +2,8 @@ package another
 
 import "flag"
 
+//import "flag"
+
 type Config struct {
 	dbConfig
 	poolConfig
@@ -12,6 +14,7 @@ type dbConfig struct {
 	DBPort     string
 	DBName     string
 	DBUser     string
+	DBEmail    string
 	DBPassword string
 }
 
