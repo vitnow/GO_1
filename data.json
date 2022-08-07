@@ -4,6 +4,7 @@
   "DBName": "space",
   "DBUser": "root",
   "DBEmail": "user@user.ru",
+  "DBUrl": "https://www.google.com/",
   "DBPassword": "root",
   "PoolMaxConns": 23,
   "PoolMinConns": 2,

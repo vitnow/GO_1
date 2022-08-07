@@ -6,6 +6,7 @@ import (
 	"net/mail"
 	"os"
 	"testos/another"
+	"net/url"
 )
 
 //К приложению из практической части предыдущего урока добавьте возможность читать данные из файлов.
@@ -32,6 +33,11 @@ func main() {
 		fmt.Println("Некорректный email в профиле")
 		panic(err)
 	}
+	u, err := url.ParseRequestURI(dt.DBUrl)	
+  	  if err != nil {
+		fmt.Println("Url не авктуален и отcутствуют данные", u)
+   panic(err)
+}
 
 	fmt.Printf("%+v\n", dt)
 	//

@@ -15,6 +15,7 @@ type dbConfig struct {
 	DBName     string
 	DBUser     string
 	DBEmail    string
+	DBUrl      string
 	DBPassword string
 }
 
